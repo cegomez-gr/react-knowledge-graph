@@ -29,7 +29,17 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Un PR que añade una dependencia con licencia no permitida (GPL/AGPL/SSPL) es bloqueado por el chequeo de licencias en CI antes de mergear.
   4. `NOTICE.md` contiene el SHA de commit real, copyright y texto de licencia de `codebase-memory-mcp` (sin placeholders), y `THIRD_PARTY_NOTICES.md` existe con el mismo nivel de detalle.
   5. Los packages consumidores declaran `react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei` como `peerDependencies`, verificable instalando el paquete en un `examples/*` real sin duplicar instancias.
-**Plans**: TBD
+**Plans**: 8 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Monorepo foundation: pnpm workspace, TypeScript project references, Turborepo tasks
+- [ ] 01-02-PLAN.md — ESLint architecture guard (D-05..D-08), CI pipeline, NOTICE.md/PROJECT.md legal finalization
+- [ ] 01-03-PLAN.md — Scaffold graph-core + empirical D-05 guard verification
+- [ ] 01-04-PLAN.md — Scaffold graph-renderer-three (peerDependencies) + empirical D-07 guard verification
+- [ ] 01-05-PLAN.md — Scaffold adapters/codebase-memory (D-09/D-10, no logic) + empirical D-08 guard verification
+- [ ] 01-06-PLAN.md — Scaffold react-knowledge-graph (peerDependencies) + empirical D-06 guard verification
+- [ ] 01-07-PLAN.md — examples/basic-usage Vite skeleton + no-duplicate-instance integration proof
+- [ ] 01-08-PLAN.md — THIRD_PARTY_NOTICES.md generation, empirical license-gate test, full-phase verification
 
 ### Phase 2: Modelo de Datos Neutral (graph-core)
 **Goal**: `graph-core` expone un modelo de grafo (`GraphNode`/`GraphEdge`/`NormalizedGraph`) y utilidades de validación/transformación que son verificablemente neutrales — no solo documentadas como tales — y no dependen de React, Three.js ni de ningún backend concreto.
