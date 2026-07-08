@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. `NOTICE.md` contiene el SHA de commit real, copyright y texto de licencia de `codebase-memory-mcp` (sin placeholders), y `THIRD_PARTY_NOTICES.md` existe con el mismo nivel de detalle.
   5. Los packages consumidores declaran `react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei` como `peerDependencies`, verificable instalando el paquete en un `examples/*` real sin duplicar instancias.
 
-**Plans**: 3/8 plans executed
+**Plans**: 5/8 plans executed
 
 Plans:
 **Wave 1**
@@ -50,8 +50,8 @@ Plans:
 
 **Wave 4** *(blocked on Wave 3 completion)*
 
-- [ ] 01-04-PLAN.md — Scaffold graph-renderer-three (peerDependencies) + empirical D-07 guard verification
-- [ ] 01-05-PLAN.md — Scaffold adapters/codebase-memory (D-09/D-10, no logic) + empirical D-08 guard verification
+- [x] 01-04-PLAN.md — Scaffold graph-renderer-three (peerDependencies) + empirical D-07 guard verification
+- [x] 01-05-PLAN.md — Scaffold adapters/codebase-memory (D-09/D-10, no logic) + empirical D-08 guard verification
 
 **Wave 5** *(blocked on Wave 4 completion)*
 
@@ -104,6 +104,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repo Scaffolding & Compliance Gates | 3/8 | In Progress|  |
+| 1. Repo Scaffolding & Compliance Gates | 5/8 | In Progress|  |
 | 2. Modelo de Datos Neutral (graph-core) | 0/TBD | Not started | - |
 | 3. Componente Visor 3D Mínimo | 0/TBD | Not started | - |
