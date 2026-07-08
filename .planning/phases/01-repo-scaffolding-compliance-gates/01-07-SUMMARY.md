@@ -147,3 +147,7 @@ None. The only new trust boundary this plan touches (`examples/basic-usage` ⇄ 
 ---
 *Phase: 01-repo-scaffolding-compliance-gates*
 *Completed: 2026-07-08*
+
+## Self-Check: PASSED
+
+All created files confirmed present on disk (examples/basic-usage/package.json, vite.config.ts, index.html, src/main.tsx, this SUMMARY.md). Task 1 commit hash (2acc02b) and SUMMARY commit hash (4520be5) confirmed present in `git log --oneline --all`. Task 2 produced no commit by design (verification-only, matches plan's `<files>none</files>` spec).
