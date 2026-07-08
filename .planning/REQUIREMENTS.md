@@ -87,37 +87,35 @@ Exclusiones explícitas. Documentadas para prevenir scope creep.
 
 ## Traceability
 
-Se completará durante la creación del roadmap.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | TBD | Pending |
-| INFRA-02 | TBD | Pending |
-| INFRA-03 | TBD | Pending |
-| INFRA-04 | TBD | Pending |
-| INFRA-05 | TBD | Pending |
-| INFRA-06 | TBD | Pending |
-| INFRA-07 | TBD | Pending |
-| CORE-01 | TBD | Pending |
-| CORE-02 | TBD | Pending |
-| CORE-03 | TBD | Pending |
-| CORE-04 | TBD | Pending |
-| VIEWER-01 | TBD | Pending |
-| VIEWER-02 | TBD | Pending |
-| VIEWER-03 | TBD | Pending |
-| VIEWER-04 | TBD | Pending |
-| VIEWER-05 | TBD | Pending |
-| VIEWER-06 | TBD | Pending |
-| VIEWER-07 | TBD | Pending |
-| VIEWER-08 | TBD | Pending |
-| VIEWER-09 | TBD | Pending |
-| VIEWER-10 | TBD | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Pending |
+| CORE-01 | Phase 2 | Pending |
+| CORE-02 | Phase 2 | Pending |
+| CORE-03 | Phase 2 | Pending |
+| CORE-04 | Phase 2 | Pending |
+| VIEWER-01 | Phase 3 | Pending |
+| VIEWER-02 | Phase 3 | Pending |
+| VIEWER-03 | Phase 3 | Pending |
+| VIEWER-04 | Phase 3 | Pending |
+| VIEWER-05 | Phase 3 | Pending |
+| VIEWER-06 | Phase 3 | Pending |
+| VIEWER-07 | Phase 3 | Pending |
+| VIEWER-08 | Phase 3 | Pending |
+| VIEWER-09 | Phase 3 | Pending |
+| VIEWER-10 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21 ⚠️ (se completará al crear el roadmap)
+- Mapped to phases: 21
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-07-08*
-*Last updated: 2026-07-08 after initial definition*
+*Last updated: 2026-07-08 after roadmap creation (3 phases, 21/21 v1 requirements mapped)*
