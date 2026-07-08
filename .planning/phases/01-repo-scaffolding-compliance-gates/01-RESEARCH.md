@@ -590,7 +590,7 @@ onlyBuiltDependencies: []
 
 ## Open Questions
 
-1. **Should the CI license gate block or only warn on the "manual review" tier (MPL-2.0, LGPL variants, EPL variants)?**
+1. **(RESOLVED via CONTEXT.md D-13) Should the CI license gate block or only warn on the "manual review" tier (MPL-2.0, LGPL variants, EPL variants)?**
    - What we know: `docs/08-licensing-compliance.md` and this project's own CLAUDE.md define three tiers (allowed / manual-review / blocked). CONTEXT.md explicitly defers the CI-blocking-scope decision, instructing the planner/researcher to default to "block only GPL/AGPL/SSPL strictly; MPL/LGPL/EPL require manual review, no automatic CI block" — and to **escalate to the user if this is ambiguous during implementation, not assume.**
    - What's unclear: The exact mechanism to give "manual review" visibility without blocking (e.g., a non-blocking CI annotation/comment vs. just leaving it out of any report at all) is not specified anywhere.
    - Recommendation: Implement the `--failOn` deny-list gate (blocks GPL/AGPL/SSPL only, per the explicit enumeration in Code Examples) as the hard gate. Optionally add a second, non-blocking CI step that surfaces any MPL/LGPL/EPL packages found (e.g., job summary output) so they're visible for manual review without failing the build. **This is a proposal, not a resolved decision — flag it back to the user per CONTEXT.md's own instruction if the planner or implementer is unsure this matches intent.**
