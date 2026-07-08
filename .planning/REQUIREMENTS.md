@@ -15,7 +15,7 @@ Requisitos para el primer tramo de trabajo (Milestones 1-3 de docs/07-roadmap.md
 - [x] **INFRA-04**: Chequeo de licencias en CI (`pnpm licenses list` o `license-checker-rseidelsohn`) wired antes de añadir cualquier dependencia real
 - [x] **INFRA-05**: `NOTICE.md` finalizado con el SHA de commit real, copyright y texto de licencia de `codebase-memory-mcp` (sustituye el placeholder actual en `NOTICE.md:14`)
 - [ ] **INFRA-06**: `THIRD_PARTY_NOTICES.md` creado
-- [ ] **INFRA-07**: `peerDependencies` (`react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei`) declaradas correctamente en todos los packages consumidores, evitando instancias duplicadas
+- [x] **INFRA-07**: `peerDependencies` (`react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei`) declaradas correctamente en todos los packages consumidores, evitando instancias duplicadas
 
 ### CORE (Modelo de datos neutral)
 
@@ -95,7 +95,7 @@ Exclusiones explícitas. Documentadas para prevenir scope creep.
 | INFRA-04 | Phase 1 | Complete |
 | INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 1 | Pending |
-| INFRA-07 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Complete |
 | CORE-01 | Phase 2 | Pending |
 | CORE-02 | Phase 2 | Pending |
 | CORE-03 | Phase 2 | Pending |
