@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. `NOTICE.md` contiene el SHA de commit real, copyright y texto de licencia de `codebase-memory-mcp` (sin placeholders), y `THIRD_PARTY_NOTICES.md` existe con el mismo nivel de detalle.
   5. Los packages consumidores declaran `react`, `react-dom`, `three`, `@react-three/fiber`, `@react-three/drei` como `peerDependencies`, verificable instalando el paquete en un `examples/*` real sin duplicar instancias.
 
-**Plans**: 7/8 plans executed
+**Plans**: 8/8 plans executed
 
 Plans:
 **Wave 1**
@@ -63,7 +63,7 @@ Plans:
 
 **Wave 7** *(blocked on Wave 6 completion)*
 
-- [ ] 01-08-PLAN.md — THIRD_PARTY_NOTICES.md generation, empirical license-gate test, full-phase verification
+- [x] 01-08-PLAN.md — THIRD_PARTY_NOTICES.md generation, empirical license-gate test, full-phase verification
 
 ### Phase 2: Modelo de Datos Neutral (graph-core)
 
@@ -104,6 +104,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repo Scaffolding & Compliance Gates | 7/8 | In Progress|  |
+| 1. Repo Scaffolding & Compliance Gates | 8/8 | In Progress|  |
 | 2. Modelo de Datos Neutral (graph-core) | 0/TBD | Not started | - |
 | 3. Componente Visor 3D Mínimo | 0/TBD | Not started | - |

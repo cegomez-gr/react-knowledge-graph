@@ -5,15 +5,15 @@ milestone_name: milestone
 current_phase: 01
 current_phase_name: repo-scaffolding-compliance-gates
 status: executing
-stopped_at: Completed 01-07-PLAN.md
-last_updated: "2026-07-09T08:25:04.709Z"
+stopped_at: Completed 01-08-PLAN.md — Phase 01 complete
+last_updated: "2026-07-09T09:46:18.280Z"
 last_activity: 2026-07-08
 last_activity_desc: Phase 01 execution started
 progress:
   total_phases: 1
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 8
-  completed_plans: 7
+  completed_plans: 8
 ---
 
 # Project State
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-07-08)
 ## Current Position
 
 Phase: 01 (repo-scaffolding-compliance-gates) — EXECUTING
-Plan: 7 of 8
+Plan: 8 of 8
 Status: Ready to execute
 Last activity: 2026-07-08 — Phase 01 execution started
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P05 | 12 | - tasks | - files |
 | Phase 01 P06 | 15min | 2 tasks | 4 files |
 | Phase 01 P07 | ~20min | 2 tasks | 5 files |
+| Phase 01 P08 | 15 | 3 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase ?]: Plan 01-06: react-knowledge-graph scaffolded con peerDependencies (react/react-dom/three/@react-three/fiber/@react-three/drei) via catalog:, dependencias workspace:* sobre graph-core y graph-renderer-three; D-06 confirmado empíricamente (react permitido, three/@react-three/*/fetch bloqueados).
 - [Phase ?]: Plan 01-07: vite@8.1.3 y @vitejs/plugin-react@6.0.3 elegidos vía npm view (no pinneados en RESEARCH.md); legitimidad verificada (mantenedores oficiales vitejs org), sin checkpoint humano al no existir flag [SUS] como en three (Plan 01-04).
 - [Phase ?]: Plan 01-07: pnpm why react / pnpm why three confirman exactamente una versión resuelta de cada uno en todo el workspace tras añadir examples/basic-usage como consumidor real — INFRA-07 / Success Criterion #5 cerrado empíricamente.
+- [Phase ?]: Plan 01-08: THIRD_PARTY_NOTICES.md generado via generate-license-file con --input por cada package.json del workspace (no invocacion root-only, que omitia three/react-dom/@react-three/*); excluidos los paquetes internos @gruporeacciona/* via config exclude scratch.
+- [Phase ?]: Plan 01-08: D-13 (politica de licencias de 3 niveles) probado empiricamente con paquetes npm reales — openpgp@6.3.1 (LGPL-3.0+, no bloquea) y @substrate/connect-extension-protocol@2.2.2 (GPL-3.0-only, si bloquea); ambos revertidos, sin residuo en package.json/pnpm-lock.yaml.
+- [Phase ?]: Plan 01-08: verificacion final de fase completa — pnpm install && pnpm exec turbo run build lint typecheck (13/13 tareas), pnpm why react/three resuelven exactamente 1 version cada uno, NOTICE.md sin placeholders. Los 5 criterios de exito de ROADMAP.md Fase 1 confirmados simultaneamente.
 
 ### Pending Todos
 
@@ -105,6 +109,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-09T08:25:04.704Z
-Stopped at: Completed 01-07-PLAN.md
+Last session: 2026-07-09T09:46:18.275Z
+Stopped at: Completed 01-08-PLAN.md — Phase 01 complete
 Resume file: None
