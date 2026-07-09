@@ -29,20 +29,28 @@ export default defineConfig(
     files: ['packages/graph-core/**/*.{ts,tsx}'],
     rules: {
       'no-restricted-imports': ['error', {
-        paths: [{ name: 'react' }, { name: 'react-dom' }, { name: 'three' }, ...noBackendCalls.paths],
-        patterns: [{ group: ['@react-three/*'], message: 'graph-core must not depend on Three.js/R3F.' }],
+        paths: [...noBackendCalls.paths],
+        patterns: [
+          { group: ['@react-three/*'], message: 'graph-core must not depend on Three.js/R3F.' },
+          { group: ['three', 'three/*'], message: 'graph-core must not depend on Three.js/R3F.' },
+          { group: ['react', 'react/*', 'react-dom', 'react-dom/*'], message: 'graph-core must not depend on React.' },
+        ],
       }],
       'no-restricted-globals': ['error', noFetchGlobal],
     },
   },
 
-  // D-06: react-knowledge-graph — react/react-dom allowed, three/backend blocked
+  // D-06: react-knowledge-graph — react/react-dom allowed, three/backend/adapters blocked
   {
     files: ['packages/react-knowledge-graph/**/*.{ts,tsx}'],
     rules: {
       'no-restricted-imports': ['error', {
-        paths: [{ name: 'three' }, ...noBackendCalls.paths],
-        patterns: [{ group: ['@react-three/*'], message: 'Access Three.js only through graph-renderer-three.' }],
+        paths: [...noBackendCalls.paths],
+        patterns: [
+          { group: ['@react-three/*'], message: 'Access Three.js only through graph-renderer-three.' },
+          { group: ['three', 'three/*'], message: 'Access Three.js only through graph-renderer-three.' },
+          { group: ['@gruporeacciona/adapter-*', '**/adapters/*'], message: 'Adapters must not be imported by react-knowledge-graph (see docs/03-architecture.md).' },
+        ],
       }],
       'no-restricted-globals': ['error', noFetchGlobal],
     },
@@ -62,8 +70,11 @@ export default defineConfig(
     files: ['packages/adapters/**/*.{ts,tsx}'],
     rules: {
       'no-restricted-imports': ['error', {
-        paths: [{ name: 'react' }, { name: 'react-dom' }, { name: 'three' }],
-        patterns: [{ group: ['@react-three/*'] }],
+        patterns: [
+          { group: ['@react-three/*'] },
+          { group: ['three', 'three/*'] },
+          { group: ['react', 'react/*', 'react-dom', 'react-dom/*'] },
+        ],
       }],
     },
   },
