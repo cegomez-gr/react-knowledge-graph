@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@gruporeacciona/react-knowledge-graph": "workspace:*",
@@ -13,6 +15,8 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^6.0.3",
     "vite": "^8.1.3"
   }
