@@ -14,14 +14,15 @@ Cualquier equipo puede montar `<KnowledgeGraphViewer nodes={} edges={} />` para 
 
 <!-- Shipped and confirmed valuable. -->
 
-(None yet — ship to validate. El repositorio es actualmente solo documentación: no hay código implementado, `packages/` está vacío, sin dependencias ni CI, según el mapeo de codebase de 2026-07-08.)
+- [x] Monorepo pnpm/Turborepo/TypeScript scaffoldeado, con guards de ESLint por arquitectura (D-05..D-08, incluyendo cobertura de subpaths), pipeline de CI con gate de licencias de 3 niveles (probado empíricamente contra GPL/AGPL reales), y `NOTICE.md`/`THIRD_PARTY_NOTICES.md` finalizados. Paquetes creados: `graph-core`, `graph-renderer-three`, `react-knowledge-graph`, `adapters/codebase-memory` (solo scaffolding, sin lógica real todavía), `examples/basic-usage` (app Vite real, sin renderizar el componente aún). Una sola instancia de React/Three en todo el workspace confirmada. — **Validado en Fase 1: Repo Scaffolding & Compliance Gates** (2026-07-09, `.planning/phases/01-repo-scaffolding-compliance-gates/01-VERIFICATION.md`, 5/5 criterios de éxito).
 
 ### Active
 
 <!-- Current scope. Building toward Milestones 1-3 del roadmap (docs/07-roadmap.md). -->
 
-- [ ] Estructura de monorepo creada: `packages/graph-core`, `packages/graph-renderer-three`, `packages/react-knowledge-graph`, `packages/adapters/{codebase-memory,graphology,neo4j}`, `examples/*` (docs/03-architecture.md)
-- [ ] Archivos de licencias/compliance completos: `LICENSE` (MIT), `NOTICE.md` con atribución real a `codebase-memory-mcp`, `THIRD_PARTY_NOTICES.md`, `SECURITY.md` (docs/08-licensing-compliance.md)
+- [ ] Implementación real de `graph-core` (tipos `GraphNode`/`GraphEdge`/`NormalizedGraph`, validación, normalización) — Fase 2, hoy solo placeholder `export {}`
+- [ ] `packages/adapters/{graphology,neo4j}` — diferidos a Milestone 6 (v2) por decisión YAGNI explícita (D-09/D-10, ver Key Decisions); solo `codebase-memory` se scaffoldeó en Fase 1
+- [ ] `LICENSE` (MIT) y `SECURITY.md` — existen como archivos sin trackear en el repo, pendientes de commit/formalización (fuera del alcance de los 8 planes de Fase 1)
 - [ ] ADRs iniciales revisados/ampliados (ya existen 3 en `docs/adr/`)
 - [ ] Visor 3D importado desde `https://github.com/DeusData/codebase-memory-mcp` (MIT, verificado) hacia `packages/react-knowledge-graph`
 - [ ] Componente React mínimo `<KnowledgeGraphViewer nodes edges onNodeClick onNodeHover />` renderizando datos mock
@@ -44,7 +45,7 @@ Todos los ítems Active son hipótesis hasta que se implementen, verifiquen y co
 ## Context
 
 - **Origen del código**: se extrae del visor 3D de `codebase-memory-mcp` (https://github.com/DeusData/codebase-memory-mcp), MIT, público, ~28.2k estrellas — verificado vía GitHub API el 2026-07-08.
-- **Estado actual del repo** (mapeo de codebase, 2026-07-08): solo documentación. No hay código de implementación, `package.json` es un placeholder, sin lockfile ni CI. `packages/` existe pero está vacío.
+- **Estado actual del repo** (post Fase 1, 2026-07-09): monorepo real con `pnpm-workspace.yaml`, `pnpm-lock.yaml`, `turbo.json`, ESLint por arquitectura, CI (`.github/workflows/ci.yml`) con gate de licencias, y 4 paquetes scaffoldeados bajo `packages/` (todos con placeholders `export {}`, sin lógica real todavía) más `examples/basic-usage` (app Vite real).
 - **Documentación previa extensa**: `docs/01` a `docs/08` (visión, viabilidad, arquitectura, modelo de datos, API React, plan de extracción, roadmap, licencias) más 3 ADRs en `docs/adr/` — son el contrato de diseño vinculante para las fases de implementación.
 - **Gap detectado en el mapeo**: `NOTICE.md:14` señala explícitamente que la atribución está sin resolver; `THIRD_PARTY_NOTICES.md` todavía no existe. Debe completarse como parte del trabajo de licencias de Milestone 1.
 - **Audiencia**: inicialmente equipos de ingeniería de Grupo Reacciona que necesiten visualizar grafos de código/conocimiento (p. ej. salidas de Codebase Memory MCP). La intención a largo plazo es publicar el paquete en abierto bajo MIT, pero eso requiere aprobación interna previa antes de cualquier publicación pública.
@@ -86,4 +87,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-08 after initialization*
+*Last updated: 2026-07-09 after Phase 1 completion*
