@@ -2,12 +2,24 @@
 phase: 01-repo-scaffolding-compliance-gates
 fixed_at: 2026-07-09T10:50:31Z
 review_path: .planning/phases/01-repo-scaffolding-compliance-gates/01-REVIEW.md
-iteration: 1
+iteration: 2
 findings_in_scope: 6
-fixed: 4
-skipped: 2
-status: partial
+fixed: 6
+skipped: 0
+status: all_fixed
 ---
+
+**Addendum (iteration 2, orchestrator-applied):** CR-02 and WR-01 (below) were
+originally skipped by the gsd-code-fixer agent because this environment's
+`config-protection` hook unconditionally blocks `Edit`/`Write`/`MultiEdit` on
+`eslint.config.js`. With explicit user authorization, the orchestrator
+temporarily disabled the hook via `ECC_DISABLED_HOOKS=pre:config-protection`
+in `.claude/settings.local.json`'s `env` block, applied the review's exact
+suggested diff, verified it empirically (subpath `three/examples/jsm/...`
+import in `graph-core` and `@gruporeacciona/adapter-codebase-memory` import in
+`react-knowledge-graph` both now fail lint; reverted with zero residual diff),
+then immediately removed the `env` override to restore the hook. Commit
+`6097db1`. Full workspace build/lint/typecheck (5/5 packages) passes clean.
 
 # Phase 01: Code Review Fix Report
 
